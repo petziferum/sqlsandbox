@@ -1,0 +1,24 @@
+# postgres user: postgres password: password
+spring:
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sandbox
+    username: postgres
+    password: password
+  application:
+    name: "SQL Sandbox"
+  flyway:
+     enabled: true
+     locations:
+       - classpath:db/postgresql/ddl/
+       - classpath:db/postgresql/daten/
+
+
