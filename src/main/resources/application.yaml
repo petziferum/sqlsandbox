@@ -3,7 +3,7 @@ spring:
   jpa:
     database: postgresql
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
@@ -15,10 +15,5 @@ spring:
     password: password
   application:
     name: "SQL Sandbox"
-  flyway:
-     enabled: true
-     locations:
-       - classpath:db/postgresql/ddl/
-       - classpath:db/postgresql/daten/
 
 
