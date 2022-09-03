@@ -26,7 +26,6 @@ public class ProductController {
     @GetMapping("/getproduct")
     public ResponseEntity<List<ProductItem>> getProduct() {
         List<ProductItem> list = productItemRepository.findAll();
-        //list.add(ProductItem.builder().name("Produktname").build());
 
         return ResponseEntity.ok(list);
     }
